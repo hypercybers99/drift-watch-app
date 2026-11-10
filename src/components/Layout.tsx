@@ -262,7 +262,7 @@ export const Layout: React.FC<{ children: React.ReactNode; currentPath: string; 
               Guard Contract <ExternalLink size={12} />
             </a>
             <a
-              href="https://github.com/huzyow155/drift-watch-genlayer"
+              href="https://github.com/hypercybers99/drift-watch-genlayer"
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: 'flex', alignItems: 'center', gap: '4px' }}

@@ -1,3 +1,7 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+dns.setDefaultResultOrder('ipv4first');
+
 import fs from 'fs';
 import path from 'path';
 import { createClient, chains, createAccount, generatePrivateKey } from 'genlayer-js';
@@ -27,8 +31,8 @@ async function runRound2() {
   const ownerClient = createClient({ chain: chains.studionet, account: ownerAccount });
   const pinnerClient = createClient({ chain: chains.studionet, account: pinnerAccount });
 
-  const testUrlV0 = 'https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md';
-  const testUrlV2 = 'https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v2-subtle.md';
+  const testUrlV0 = 'https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md';
+  const testUrlV2 = 'https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v2-subtle.md';
   const redlines = JSON.stringify([
     'Must not allow sharing of identifiable or non-anonymized user data with third parties.',
     'Must not keep deleted user data for more than 90 days.',

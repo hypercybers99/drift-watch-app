@@ -1,3 +1,7 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+dns.setDefaultResultOrder('ipv4first');
+
 import fs from 'fs';
 import path from 'path';
 import { createClient, chains, createAccount, generatePrivateKey } from 'genlayer-js';
@@ -81,8 +85,8 @@ async function executeAndSave(client, contractAddr, fnName, args, label, expecte
 }
 
 async function run() {
-  const testUrl = 'https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md';
-  const testUrlV2 = 'https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v3-obvious.md';
+  const testUrl = 'https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md';
+  const testUrlV2 = 'https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v3-obvious.md';
   const redlines = JSON.stringify(['No mandatory binding arbitration', 'Notice required before terms change']);
 
   // 1. Create Watch

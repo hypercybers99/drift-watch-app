@@ -22,7 +22,7 @@ export const CreateWatchPage: React.FC<{ navigate: (path: string) => void }> = (
   // Quick fill Acme Notes example
   const handleQuickFill = () => {
     setName('Acme Notes Terms Watch');
-    setUrl('https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md');
+    setUrl('https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v0.md');
     setRedlines([
       'Must not allow sharing of identifiable or non-anonymized user data with third parties.',
       'Must not keep deleted user data for more than 90 days.',

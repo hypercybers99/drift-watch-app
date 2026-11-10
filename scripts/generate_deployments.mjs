@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const contractRepoPath = path.resolve('E:/DriftWatch_V2');
 const sourceDeploymentsPath = path.resolve('E:/DriftWatch_V2/scripts/deploy/deployments.json');
 const targetDeploymentsTsPath = path.resolve(__dirname, '../src/config/deployments.ts');
 
@@ -15,6 +17,13 @@ if (!fs.existsSync(sourceDeploymentsPath)) {
 
 const raw = fs.readFileSync(sourceDeploymentsPath, 'utf8');
 const data = JSON.parse(raw);
+
+let contractRepoHead = "732614e3164c97958f303e6df188e1cd3bca56ad";
+try {
+  contractRepoHead = execSync('git rev-parse HEAD', { cwd: contractRepoPath }).toString().trim();
+} catch (e) {
+  console.warn("Could not determine git HEAD dynamically, using fallback:", contractRepoHead);
+}
 
 const targetDir = path.dirname(targetDeploymentsTsPath);
 if (!fs.existsSync(targetDir)) {
@@ -56,7 +65,7 @@ export const DEPLOYMENTS: DeploymentsConfig = {
   chainId: ${data.chainId},
   rpc: ${JSON.stringify(data.rpc)},
   explorerBase: ${JSON.stringify(data.explorerBase)},
-  contractRepoHead: "01fc90c6911d3d4564a397196c702b2de3f00fb2",
+  contractRepoHead: ${JSON.stringify(contractRepoHead)},
   driftWatch: {
     address: ${JSON.stringify(data.driftWatch.address)} as \`0x\${string}\`,
     deployTxHash: ${JSON.stringify(data.driftWatch.deployTxHash)},

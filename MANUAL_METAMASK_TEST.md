@@ -34,7 +34,7 @@ This document provides human-executable verification steps for testing the Drift
 
 ## Step 3: Inspect Watch Detail & Redline Diff
 1. From `/app`, click on Watch #1 (or open `/app/watch/1`).
-2. Verify the terms source URL: `https://raw.githubusercontent.com/huzyow155/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v5-harmless.md`.
+2. Verify the terms source URL: `https://raw.githubusercontent.com/hypercybers99/drift-watch-fixtures/c8ff0f0cf8b5e406a44baad04867cb793c52d328/terms-v5-harmless.md`.
 3. Check the redlines list (4 items).
 4. Review the latest checks history list.
 5. Click on an individual check card to inspect the diff visualization.

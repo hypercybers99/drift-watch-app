@@ -133,6 +133,16 @@ export const ERROR_MAPPINGS: Record<string, { title: string; explanation: string
     title: 'Watch Inactive',
     explanation: 'DriftGuard can only pin watches that have completed baseline initialization.',
     action: 'Wait for the watch owner to set the baseline before pinning.'
+  },
+  'baseline state inconsistent': {
+    title: 'Baseline State Inconsistent',
+    explanation: 'Independent validator recomputation detected a divergence between leader-reported state and recomputed hashes, clauses, or diffs.',
+    action: 'Ensure source terms are served deterministically, or re-run the transaction.'
+  },
+  'check snapshot does not match its recorded hash': {
+    title: 'Snapshot Hash Integrity Mismatch',
+    explanation: 'The recomputed normalized hash of the candidate snapshot clauses does not match its recorded hash in contract storage.',
+    action: 'Run a fresh check against the current source terms before attempting to advance the baseline.'
   }
 };
 

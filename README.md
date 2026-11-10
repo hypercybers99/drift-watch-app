@@ -4,19 +4,19 @@ Web application for **DriftWatch** and **DriftGuard**: monitoring terms-of-servi
 
 - **Status**: Preview
 - **Production URL**: [https://drift-watch-app.vercel.app](https://drift-watch-app.vercel.app) (also at [https://drift-watch-app-hyper-8cdf.vercel.app](https://drift-watch-app-hyper-8cdf.vercel.app))
-- **Contract Repository**: [huzyow155/drift-watch-genlayer](https://github.com/huzyow155/drift-watch-genlayer)
-- **Fixtures Repository**: [huzyow155/drift-watch-fixtures](https://github.com/huzyow155/drift-watch-fixtures)
-- **License**: Hyper (huzyow155)
+- **Contract Repository**: [hypercybers99/drift-watch-genlayer](https://github.com/hypercybers99/drift-watch-genlayer)
+- **Fixtures Repository**: [hypercybers99/drift-watch-fixtures](https://github.com/hypercybers99/drift-watch-fixtures)
+- **License**: Hyper (hypercybers99)
 
 ---
 
-## Active Studionet Contracts (Pinned)
+## Active Studionet Contracts (Pinned V3)
 
 - **Network**: GenLayer Studionet (Chain ID `61999`, RPC `https://studio.genlayer.com/api`)
-- **Pinned Commit**: Contract repo HEAD `01fc90c6911d3d4564a397196c702b2de3f00fb2`
-- **DriftWatch Contract**: [`0xe8A159D3622D33aA0B62da57aF033F2C6D9fdEfD`](https://explorer-studio.genlayer.com/address/0xe8A159D3622D33aA0B62da57aF033F2C6D9fdEfD)
-  - Source SHA-256: `2dcd113b3811f7041495878fb0e072020ca366afbe7d35740902080db057ca3e`
-- **DriftGuard Contract**: [`0x0f336D97134D9770aBFA20d3B2Ad5B9f7D4BC557`](https://explorer-studio.genlayer.com/address/0x0f336D97134D9770aBFA20d3B2Ad5B9f7D4BC557)
+- **Pinned Commit**: Contract repo HEAD `732614e3164c97958f303e6df188e1cd3bca56ad` (tag `dw-v3`)
+- **DriftWatch Contract (V3)**: [`0xf8D23c16B5655bE7dF9897dC76C1C576d4c68F85`](https://explorer-studio.genlayer.com/address/0xf8D23c16B5655bE7dF9897dC76C1C576d4c68F85)
+  - Source SHA-256: `2a2d3ebde7563ba146de73ead1cbdc3b0b52e82cfc60eddce3a595a5ea4c428c`
+- **DriftGuard Contract (V3)**: [`0x4D2123ac8Ceb59967B2009ab7A261C290348abC4`](https://explorer-studio.genlayer.com/address/0x4D2123ac8Ceb59967B2009ab7A261C290348abC4)
   - Source SHA-256: `eb1b26aed095daf61ad1b94b1752d1636055965311543319d8fe214bc24863dc`
 
 ---
